@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo</title>
+    <link rel="stylesheet" href="Estilos.css">
+    
+</head>
+<body>
+    <header>
+//<source src="file:///C:\Users\g95_r\Downloads/video.mp4">        
+        <video autoplay loop id ="miVideo" type="video/mp4">
+            <source src="./video.mp4">
+            tu navegador no soporta video
+        </video>
+        <h2>
+            El secreto de la representacion
+            <button id="miBtn" onclick = "miFuncion()">Pausa</button>
+        </h2>
+        <script>
+            var video = document.getElementById("miVideo");
+            var btn = document.getElementById("miBtn");
+            function miFuncion(){
+                if(video.paused){
+                    video.play();
+                    btn.innerrHTML= "Pausa";
+                } else {
+                    video.pause();
+                    btn.innerHTML = "Play"
+                }
+            }
+        </script>
+    </header>
+</body>
+</html>
